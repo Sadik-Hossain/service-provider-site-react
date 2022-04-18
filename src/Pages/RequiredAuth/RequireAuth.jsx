@@ -23,41 +23,48 @@ const RequireAuth = ({ children }) => {
 
   if (!user.emailVerified) {
     return (
-      <div>
-        <h3>Your Email is not verified!!</h3>
-        <h5> Please Verify your email address</h5>
+      <div style={{ textAlign: "center", margin: "2rem  0" }}>
+        <h1
+          style={{
+            textAlign: "center",
+            color: "red",
+            textTransform: "capitalize",
+          }}
+        >
+          Your Email is not verified!!
+        </h1>
+        <h2
+          style={{
+            textAlign: "center",
+            color: "red",
+            textTransform: "capitalize",
+          }}
+        >
+          Please Verify your email address
+        </h2>
         <button
+          style={{
+            padding: "1rem",
+            marginLeft: "1rem",
+            color: "green",
+            fontSize: "1rem",
+            fontWeight: "bold",
+            cursor: "pointer",
+            background: "transparent",
+          }}
           onClick={async () => {
             await sendEmailVerification();
             toast("Sent email");
           }}
         >
-          Send Verification Email Again
+          Send Verification Email
         </button>
         <ToastContainer></ToastContainer>
       </div>
     );
+  } else {
+    return children;
   }
-
-  return children;
 };
 
 export default RequireAuth;
-
-// import React from "react";
-// import { useAuthState } from "react-firebase-hooks/auth";
-// import { Navigate, useLocation } from "react-router-dom";
-// import auth from "../../firebase.init";
-
-// const RequireAuth = ({ children }) => {
-//   const [user, loading, error] = useAuthState(auth);
-//   let location = useLocation();
-
-//   if (user) {
-//     return children;
-//   } else {
-//     return <Navigate to="/login" state={{ from: location }} replace />;
-//   }
-// };
-
-// export default RequireAuth;

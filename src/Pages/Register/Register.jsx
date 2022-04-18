@@ -35,12 +35,16 @@ const Register = () => {
     const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
+    const confirmPassword = event.target.confirmPassword.value;
     // const agree = event.target.terms.checked;
-
-    await createUserWithEmailAndPassword(email, password);
-    await updateProfile({ displayName: name });
-    console.log("Updated profile");
-    navigate("/home");
+    if (password !== confirmPassword) {
+      alert(`password didn't matched`);
+    } else {
+      await createUserWithEmailAndPassword(email, password);
+      await updateProfile({ displayName: name });
+      console.log("Updated profile");
+      navigate("/home");
+    }
   };
 
   return (
@@ -65,6 +69,13 @@ const Register = () => {
           required
         />
         <input
+          type="password"
+          name="confirmPassword"
+          id=""
+          placeholder="Confirm Password"
+          required
+        />
+        <input
           onClick={() => setAgree(!agree)}
           type="checkbox"
           name="terms"
@@ -75,8 +86,16 @@ const Register = () => {
         <input disabled={!agree} type="submit" value="Register" />
       </form>
       <p>
-        Already have an account? 
-        <Link style={{textDecoration:"none", color:"salmon",marginLeft:".5rem"}} to="/login" onClick={navigateLogin}>
+        Already have an account?
+        <Link
+          style={{
+            textDecoration: "none",
+            color: "salmon",
+            marginLeft: ".5rem",
+          }}
+          to="/login"
+          onClick={navigateLogin}
+        >
           Please Login
         </Link>
       </p>
@@ -86,10 +105,3 @@ const Register = () => {
 };
 
 export default Register;
-
-{
-  /* <label className={agree ? 'ps-2': 'ps-2 text-danger'} htmlFor="terms">Accept Genius Car Terms and Conditions</label> */
-}
-{
-  /* <label  className={`ps-2 ${agree ? "" : "text-danger"}`} htmlFor="terms">Accept Genius Car Terms and Conditions</label> */
-}

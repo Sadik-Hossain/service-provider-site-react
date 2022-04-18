@@ -61,7 +61,7 @@ const Login = () => {
 
   return (
     <div className="register-form">
-      <h2>Please Login</h2>
+      <h2 style={{textAlign:"center"}}>Please Login</h2>
 
       <form className="form" onSubmit={handleSubmit}>
         <input
@@ -100,7 +100,7 @@ const Login = () => {
       </p>
       <p>
         Forget Password?
-        <button onClick={resetPassword}>Reset Password</button>
+        <button style={{padding:".6rem",marginLeft:"1rem"}} onClick={resetPassword}>Reset Password</button>
       </p>
       <SocialLogin></SocialLogin>
       <ToastContainer />
