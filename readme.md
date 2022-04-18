@@ -1,5 +1,7 @@
 # Zen-Wedding-Photography-site
 
+## live-site-link : https://zen-wedding-photography-site.netlify.app/
+
 ## technologies used: react / firebase / react-firebase-hooks / react-router / react-toastify
 
 ### about website:
