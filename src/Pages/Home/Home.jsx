@@ -9,7 +9,7 @@ const Home = () => {
       .then((data) => setServices(data));
   }, []);
 
-  const banner = "banner.jpg";
+  const banner = "https://i.ibb.co/f9zs4r8/banner.jpg";
   return (
     <div>
       <div className="banner-container">
