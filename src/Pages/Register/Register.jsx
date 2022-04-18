@@ -36,7 +36,6 @@ const Register = () => {
     const email = event.target.email.value;
     const password = event.target.password.value;
     const confirmPassword = event.target.confirmPassword.value;
-    // const agree = event.target.terms.checked;
     if (password !== confirmPassword) {
       alert(`password didn't matched`);
     } else {

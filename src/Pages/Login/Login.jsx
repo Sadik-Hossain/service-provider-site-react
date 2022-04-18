@@ -10,7 +10,6 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Login.css";
-// import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -34,14 +33,15 @@ const Login = () => {
   }
 
   if (error) {
-    errorElement = <p style={{color:"red"}}>Error: Email password didn't match</p>;
+    errorElement = (
+      <p style={{ color: "red" }}>Error: Email password didn't match</p>
+    );
   }
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-
     signInWithEmailAndPassword(email, password);
   };
 
