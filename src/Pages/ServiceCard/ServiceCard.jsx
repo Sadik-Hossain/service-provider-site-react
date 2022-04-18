@@ -7,11 +7,10 @@ const ServiceCard = ({ service }) => {
     <div style={{ border: "2px solid", borderRadius: "1rem" }} className="card">
       <img
         style={{
-          width: "300px",
+          width: "100%",
           height: "auto",
-          marginTop: "1rem",
           outline: "1px solid",
-          borderRadius: "1rem",
+          borderRadius: "1rem 1rem 0 0",
         }}
         src={service.photoURL}
         alt=""
