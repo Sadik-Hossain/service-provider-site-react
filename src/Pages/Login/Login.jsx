@@ -5,11 +5,11 @@ import {
 } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
-
 import Loading from "../Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./Login.css"
 // import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 const Login = () => {
@@ -45,7 +45,7 @@ const Login = () => {
     signInWithEmailAndPassword(email, password);
   };
 
-  const navigateRegister = (event) => {
+  const navigateRegister = () => {
     navigate("/register");
   };
 
@@ -60,11 +60,12 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="register-form">
       <h2>Please Login</h2>
-      <form onSubmit={handleSubmit}>
-        <input ref={emailRef} type="email" placeholder="Enter email" required />
-        <input
+     
+      <form className="form" onSubmit={handleSubmit}>
+        <input className="form-input" ref={emailRef} type="email" placeholder="Enter email" required />
+        <input className="form-input"
           type="password"
           name=""
           id=""
@@ -73,12 +74,12 @@ const Login = () => {
           required
         />
 
-        <input type="submit" value="login" />
+        <input className="form-input" type="submit" value="login" />
       </form>
       {errorElement}
       <p>
         New to Genius Car?
-        <Link to="/register" onClick={navigateRegister}>
+        <Link  to="/register" onClick={navigateRegister}>
           Please Register
         </Link>
       </p>
@@ -88,6 +89,7 @@ const Login = () => {
       </p>
       <SocialLogin></SocialLogin>
       <ToastContainer />
+      
     </div>
   );
 };

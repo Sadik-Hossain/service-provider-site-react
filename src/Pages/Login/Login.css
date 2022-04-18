@@ -1,0 +1,11 @@
+.form-container{
+ display: flex;
+ justify-content: center;
+}
+.form {
+  display: block;
+  
+}
+.form-input {
+  display: block;
+}

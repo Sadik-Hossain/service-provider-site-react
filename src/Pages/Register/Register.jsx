@@ -8,6 +8,7 @@ import "./Register.css";
 import auth from "../../firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import Loading from "../Loading/Loading";
+import "./Register.css";
 
 const Register = () => {
   const [agree, setAgree] = useState(false);
@@ -70,7 +71,7 @@ const Register = () => {
           id="terms"
         />
 
-        <label htmlFor="terms">Accept Genius Car Terms and Conditions</label>
+        <label htmlFor="terms">Accept terms and Conditions</label>
         <input disabled={!agree} type="submit" value="Register" />
       </form>
       <p>
