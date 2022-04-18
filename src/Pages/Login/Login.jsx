@@ -9,7 +9,7 @@ import Loading from "../Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./Login.css"
+import "./Login.css";
 // import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 const Login = () => {
@@ -62,10 +62,17 @@ const Login = () => {
   return (
     <div className="register-form">
       <h2>Please Login</h2>
-     
+
       <form className="form" onSubmit={handleSubmit}>
-        <input className="form-input" ref={emailRef} type="email" placeholder="Enter email" required />
-        <input className="form-input"
+        <input
+          className="form-input"
+          ref={emailRef}
+          type="email"
+          placeholder="Enter email"
+          required
+        />
+        <input
+          className="form-input"
           type="password"
           name=""
           id=""
@@ -79,7 +86,15 @@ const Login = () => {
       {errorElement}
       <p>
         New to Genius Car?
-        <Link  to="/register" onClick={navigateRegister}>
+        <Link
+          style={{
+            textDecoration: "none",
+            color: "salmon",
+            marginLeft: ".5rem",
+          }}
+          to="/register"
+          onClick={navigateRegister}
+        >
           Please Register
         </Link>
       </p>
@@ -89,7 +104,6 @@ const Login = () => {
       </p>
       <SocialLogin></SocialLogin>
       <ToastContainer />
-      
     </div>
   );
 };

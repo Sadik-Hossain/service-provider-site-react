@@ -10,8 +10,9 @@ const Header = () => {
   const handleSignOut = () => {
     signOut(auth);
   };
+  console.log(user);
   return (
-    <nav style={{ background: "black", padding: "2rem 0" }}>
+    <nav style={{ background: "salmon", padding: "2rem 0" }}>
       <div
         style={{
           display: "flex",
@@ -35,11 +36,21 @@ const Header = () => {
           </Link>
         </div>
         <div>
-          <Link className="link" to="/register">
-            Register
-          </Link>
           {user ? (
-            <button onClick={handleSignOut}>sign out</button>
+            ""
+          ) : (
+            <Link className="link" to="/register">
+              Register
+            </Link>
+          )}
+
+          {user ? (
+            <button className="logout"
+              
+              onClick={handleSignOut}
+            >
+              sign out
+            </button>
           ) : (
             <Link className="link" to="/login">
               Login

@@ -1,5 +1,18 @@
-.link{
-    text-decoration: none;
-    margin-right: 1rem;
-    color: white;
+.link {
+  text-decoration: none;
+  margin-right: 1rem;
+  color: white;
+}
+.logout {
+  padding: 0.8rem 1rem;
+  border-radius: 0.8rem;
+  border: 2px solid black;
+  color: black;
+  font-size: 0.9rem;
+  background: transparent;
+  cursor: pointer;
+}
+.logout:hover {
+  background: #000;
+  color: white;
 }

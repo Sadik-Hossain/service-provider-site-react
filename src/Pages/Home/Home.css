@@ -32,14 +32,14 @@
 }
 .button {
   background: black;
-  color: white;
+  color: salmon;
   padding: 0.7rem;
   width: 100%;
   border-radius: 0 0 10px 10px;
   border: 0;
 }
 .button:hover {
-  background: white;
+  background: salmon;
   color: black;
-  outline: 2px solid;
+  outline: 2px solid black;
 }

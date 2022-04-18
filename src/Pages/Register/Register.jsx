@@ -75,8 +75,8 @@ const Register = () => {
         <input disabled={!agree} type="submit" value="Register" />
       </form>
       <p>
-        Already have an account?
-        <Link to="/login" onClick={navigateLogin}>
+        Already have an account? 
+        <Link style={{textDecoration:"none", color:"salmon",marginLeft:".5rem"}} to="/login" onClick={navigateLogin}>
           Please Login
         </Link>
       </p>
