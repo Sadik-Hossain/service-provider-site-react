@@ -1,10 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Header.css'
+import "./Header.css";
 const Header = () => {
   return (
-    <nav style={{background:"black",padding:"1rem 0"}}>
-      <div style={{ display: "flex", justifyContent: "space-between",alignItems:"center", padding:"0 1rem" }}>
+    <nav style={{ background: "black", padding: "2rem 0" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "0 1rem",
+        }}
+      >
         <div>
           <Link className="link" to="/home">
             Home

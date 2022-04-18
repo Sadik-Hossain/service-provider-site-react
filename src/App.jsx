@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import About from "./Pages/About/About";
 import Blogs from "./Pages/Blogs/Blogs";
 import CheckOut from "./Pages/CheckOut/CheckOut";
+import Footer from "./Pages/Footer/Footer";
 import Header from "./Pages/Header/Header";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
@@ -12,8 +13,8 @@ import Register from "./Pages/Register/Register";
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
+    <div className="App" >
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -24,6 +25,7 @@ function App() {
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }
