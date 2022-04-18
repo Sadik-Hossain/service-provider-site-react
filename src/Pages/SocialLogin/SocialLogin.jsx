@@ -12,27 +12,21 @@ import { useNavigate } from "react-router-dom";
 import Loading from "../Loading/Loading";
 const google = `https://i.ibb.co/J7RvT3j/google.png`;
 
-
 const SocialLogin = () => {
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-  const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
   const navigate = useNavigate();
 
   let errorElement;
 
-  if (loading || loading1) {
+  if (loading) {
     return <Loading></Loading>;
   }
 
-  if (error || error1) {
-    errorElement = (
-      <p style={{ color: "red" }}>
-        Error: {error?.message} {error1?.message}
-      </p>
-    );
+  if (error) {
+    errorElement = <p style={{ color: "red" }}>Error: {error?.message}</p>;
   }
 
-  if (user || user1) {
+  if (user) {
     navigate("/home");
   }
 

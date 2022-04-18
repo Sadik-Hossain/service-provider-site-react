@@ -10,7 +10,6 @@ const Header = () => {
   const handleSignOut = () => {
     signOut(auth);
   };
-  console.log(user);
   return (
     <nav style={{ background: "salmon", padding: "2rem 0" }}>
       <div
@@ -45,10 +44,7 @@ const Header = () => {
           )}
 
           {user ? (
-            <button className="logout"
-              
-              onClick={handleSignOut}
-            >
+            <button className="logout" onClick={handleSignOut}>
               sign out
             </button>
           ) : (
