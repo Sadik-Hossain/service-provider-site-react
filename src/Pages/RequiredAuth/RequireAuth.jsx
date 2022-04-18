@@ -54,6 +54,7 @@ const RequireAuth = ({ children }) => {
           }}
           onClick={async () => {
             await sendEmailVerification();
+            <Navigate to="/checkout" state={{ from: location }} replace />;
             toast("Sent email");
           }}
         >

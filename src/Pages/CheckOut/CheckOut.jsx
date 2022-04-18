@@ -14,6 +14,15 @@ const CheckOut = () => {
   };
   return (
     <div className="register-form">
+      <h1
+        style={{
+          textAlign: "center",
+          color: "salmon",
+          textTransform: "capitalize",
+        }}
+      >
+        Please fillout the form to checkout
+      </h1>
       <form onSubmit={handleSubmit}>
         <input type="text" name="name" id="" placeholder="Your Name" />
 

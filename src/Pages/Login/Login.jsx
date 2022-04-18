@@ -34,7 +34,7 @@ const Login = () => {
   }
 
   if (error) {
-    errorElement = <p className="text-danger">Error: {error?.message}</p>;
+    errorElement = <p style={{color:"red"}}>Error: Email password didn't match</p>;
   }
 
   const handleSubmit = (event) => {
@@ -61,7 +61,7 @@ const Login = () => {
 
   return (
     <div className="register-form">
-      <h2 style={{textAlign:"center"}}>Please Login</h2>
+      <h2 style={{ textAlign: "center" }}>Please Login</h2>
 
       <form className="form" onSubmit={handleSubmit}>
         <input
@@ -100,7 +100,12 @@ const Login = () => {
       </p>
       <p>
         Forget Password?
-        <button style={{padding:".6rem",marginLeft:"1rem"}} onClick={resetPassword}>Reset Password</button>
+        <button
+          style={{ padding: ".6rem", marginLeft: "1rem" }}
+          onClick={resetPassword}
+        >
+          Reset Password
+        </button>
       </p>
       <SocialLogin></SocialLogin>
       <ToastContainer />
@@ -109,15 +114,3 @@ const Login = () => {
 };
 
 export default Login;
-
-// import React from "react";
-
-// const Login = () => {
-//   return (
-//     <div className="form-container">
-//       <h1 style={{ textAlign: "center" }}>please login</h1>
-//     </div>
-//   );
-// };
-
-// export default Login;
