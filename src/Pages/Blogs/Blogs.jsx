@@ -16,7 +16,7 @@ const Blogs = () => {
       </p>
       <h1 className="blog-title">What other services does firebase provide other than authentication?</h1>
       <hr />
-      <p className="blog-ans">Beside authentication, firebase provide cloud hosting, cloud functions, cloud storage, cloud messaging, google analytics.</p>
+      <p className="blog-ans">Beside authentication, firebase provide cloud hosting, cloud functions, cloud storage, cloud messaging, google analytics, remote config.</p>
     </div>
   );
 };
